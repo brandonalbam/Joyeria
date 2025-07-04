@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELEMENTAL Joyería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #000000;
+      --gold: #D4AF37;
+      --emerald: #1B3B2F;
+      --white: #ffffff;
+    }
+    * {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+    }
+    header {
+      background-color: var(--black);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--gold);
+      animation: fadeInDown 1s ease-out;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      background-color: var(--emerald);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: fadeIn 1s ease-out;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 300;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--gold);
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1616106211212-e6c4eaa1e982?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: zoomIn 1.5s ease-out;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--white);
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+    .section h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .galeria img {
+      width: 300px;
+      height: auto;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3);
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: var(--gold);
+      color: var(--black);
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: var(--white);
+      color: var(--black);
+    }
+    footer {
+      background-color: var(--emerald);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(1.1); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ELEMENTAL</h1>
+  </header>
+  <nav>
+    <a href="#colecciones">Colecciones</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <section class="hero">
+    <h2>Donde la Naturaleza se Encuentra con el Lujo</h2>
+  </section>
+  <section class="section" id="colecciones">
+    <h3>Nuestras Colecciones</h3>
+    <p>Descubre nuestras piezas artesanales en oro de 18k y esmeraldas, inspiradas en la elegancia natural y creadas para perdurar por generaciones.</p>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1602526432604-c74b0e801a50?auto=format&fit=crop&w=600&q=80" alt="Anillo de esmeralda">
+      <img src="https://images.unsplash.com/photo-1610500793722-2c8b8e24005f?auto=format&fit=crop&w=600&q=80" alt="Aretes de oro">
+      <img src="https://images.unsplash.com/photo-1562157873-818bc0726f76?auto=format&fit=crop&w=600&q=80" alt="Collar elegante">
+    </div>
+  </section>
+  <section class="section" id="nosotros">
+    <h3>Sobre Nosotros</h3>
+    <p>ELEMENTAL nace del deseo de fusionar la belleza atemporal con la esencia de la naturaleza. Cada joya es una obra maestra creada con materiales nobles y un profundo respeto por el arte y el detalle.</p>
+  </section>
+  <section class="section" id="contacto">
+    <h3>Contáctanos</h3>
+    <form>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+  <footer>
+    &copy; 2025 ELEMENTAL. Todos los derechos reservados. | <a href="mailto:contacto@elementaljoyeria.com">contacto@elementaljoyeria.com</a>
+  </footer>
+</body>
+</html>
